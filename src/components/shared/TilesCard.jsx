@@ -17,7 +17,7 @@ const TilesCard = async ({featureTile}) => {
                 <div className="text-center">
                     <h2 className="card-title">{featureTile.title}</h2>
                     <div className="mt-5">
-                        <button className="btn btn-outline w-full rounded-full"><Link href={''}>View Details</Link></button>
+                        <button className="btn btn-outline w-full rounded-full"><Link href={`/tilesDetails/${featureTile.id}`}>View Details</Link></button>
                     </div>
                 </div>
             </div>
