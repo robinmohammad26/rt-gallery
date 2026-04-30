@@ -1,6 +1,7 @@
 'use client'
 import { authClient } from "@/lib/auth-client";
 import Link from "next/link";
+import { redirect } from "next/navigation";
 import { toast } from "react-toastify";
 
 
@@ -26,6 +27,7 @@ const RegisterPage = () => {
         }
         else if(data){
             toast.success(`${data.user.name} Register Successfully`)
+            redirect('/login')
         }
     }
 
