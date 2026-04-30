@@ -2,12 +2,13 @@
 import { authClient } from "@/lib/auth-client";
 import Link from "next/link";
 import { redirect } from "next/navigation";
+import { FaGoogle } from "react-icons/fa";
 import { toast } from "react-toastify";
 
 
 const RegisterPage = () => {
 
-    const handleRegisterForm = async(e) => {
+    const handleRegisterForm = async (e) => {
         e.preventDefault()
 
         const name = e.target.name.value;
@@ -22,14 +23,20 @@ const RegisterPage = () => {
             image,
         });
 
-        if(error){
+        if (error) {
             toast.warning('User Register Failed')
         }
-        else if(data){
+        else if (data) {
             toast.success(`${data.user.name} Register Successfully`)
             redirect('/login')
         }
     }
+
+     const handleGoogleRegistration = async () => {
+            const data = await authClient.signIn.social({
+                    provider: "google",
+                });
+        }
 
     return (
         <div className="flex flex-col justify-center min-h-[50vh]">
@@ -55,6 +62,8 @@ const RegisterPage = () => {
 
                     <div className="my-2 space-y-2">
                         <p className="text-center font-semibold text-sm">Already have a account? <span className="text-pink-700 font-semibold cursor-pointer"><Link href={'/login'}>Login</Link></span></p>
+                        <p className="text-center font-semibold text-sm">or</p>
+                        <p><button onClick={handleGoogleRegistration} className="btn bg-purple-600 hover:bg-purple-500 p-4 text-white w-full rounded-full"><FaGoogle /> Continue with Google</button></p>
                     </div>
 
                 </fieldset>

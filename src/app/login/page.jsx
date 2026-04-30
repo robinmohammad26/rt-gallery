@@ -27,32 +27,39 @@ const LoginPage = () => {
         }
     }
 
-    return (
-        <div className="flex flex-col justify-center min-h-[50vh]">
-            <h2 className="text-3xl font-bold text-center">Login Page</h2>
-            <div className="mt-8 flex justify-center mb-5">
-                <fieldset className="fieldset bg-base-200 border-base-300 rounded-box w-md border p-4">
 
-                    <form className="space-y-3" onSubmit={handleLoginForm}>
-                        <label className="label">Email</label>
-                        <input type="email" className="input w-full" name="email" placeholder="Enter Your Email" />
+    const handleGoogleLogin = async () => {
+        const data = await authClient.signIn.social({
+                provider: "google",
+            });
+    }
 
-                        <label className="label">Password</label>
-                        <input type="password" className="input w-full" name="password" placeholder="Enter Your Password" />
+        return (
+            <div className="flex flex-col justify-center min-h-[50vh]">
+                <h2 className="text-3xl font-bold text-center">Login Page</h2>
+                <div className="mt-8 flex justify-center mb-5">
+                    <fieldset className="fieldset bg-base-200 border-base-300 rounded-box w-md border p-4">
 
-                        <button className="btn bg-pink-800 hover:bg-pink-500 text-white rounded-full mt-4 w-full">Login</button>
+                        <form className="space-y-3" onSubmit={handleLoginForm}>
+                            <label className="label">Email</label>
+                            <input type="email" className="input w-full" name="email" placeholder="Enter Your Email" />
 
-                        <div className="my-2 space-y-2">
-                            <p className="text-center font-semibold text-sm">Don&apos;t have a account? <span className="text-pink-700 font-semibold cursor-pointer"><Link href={'/register'}>Register</Link></span></p>
-                            <p className="text-center font-semibold text-sm">or</p>
-                            <p><button className="btn bg-purple-600 hover:bg-purple-500 p-4 text-white w-full rounded-full"><FaGoogle /> Continue with Google</button></p>
-                        </div>
-                    </form>
+                            <label className="label">Password</label>
+                            <input type="password" className="input w-full" name="password" placeholder="Enter Your Password" />
 
-                </fieldset>
+                            <button className="btn bg-pink-800 hover:bg-pink-500 text-white rounded-full mt-4 w-full">Login</button>
+
+                            <div className="my-2 space-y-2">
+                                <p className="text-center font-semibold text-sm">Don&apos;t have a account? <span className="text-pink-700 font-semibold cursor-pointer"><Link href={'/register'}>Register</Link></span></p>
+                                <p className="text-center font-semibold text-sm">or</p>
+                                <p><button onClick={handleGoogleLogin} className="btn bg-purple-600 hover:bg-purple-500 p-4 text-white w-full rounded-full"><FaGoogle /> Continue with Google</button></p>
+                            </div>
+                        </form>
+
+                    </fieldset>
+                </div>
             </div>
-        </div>
-    );
-};
+        );
+    };
 
-export default LoginPage;
+    export default LoginPage;
