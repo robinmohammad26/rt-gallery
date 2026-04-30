@@ -1,6 +1,17 @@
+'use client'
+import { authClient } from "@/lib/auth-client";
+import Image from "next/image";
 import Link from "next/link";
 
 const Navbar = () => {
+
+    const userData = authClient.useSession();
+    const user = userData.data?.user;
+
+
+    const handleLogout = async () => {
+        await authClient.signOut();
+    }
 
     const navLinks = <>
         <li><Link href={'/'}>Home</Link></li>
@@ -29,8 +40,26 @@ const Navbar = () => {
                         {navLinks}
                     </ul>
                 </div>
-                <div className="navbar-end">
-                    <button className="px-6 py-2 bg-pink-700 text-white rounded-full hover:bg-pink-600"><Link href={'/login'}>Login</Link></button>
+                <div className="navbar-end gap-2">
+                    { user ?
+                         <><div className="avatar avatar-online">
+                            <div className="w-12 rounded-full relative aspect-square">
+                                <Image 
+                                    src={user.image}
+                                    fill
+                                    className="object-cover"
+                                    alt="user Image"
+                                />
+                            </div>
+                        </div><div>
+                                <button onClick={handleLogout} className="px-6 py-2 bg-pink-700 text-white rounded-full hover:bg-pink-600"><Link href={'/'}>Logout</Link></button>
+                            </div></> :
+
+                            <div>
+                                <button className="px-6 py-2 bg-pink-700 text-white rounded-full hover:bg-pink-600"><Link href={'/login'}>Login</Link></button>
+                            </div>
+                    }
+
                 </div>
             </div>
         </div>
