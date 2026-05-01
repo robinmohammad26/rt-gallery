@@ -23,7 +23,7 @@ const MyProfilePage = () => {
 
     return (
         <div className='container mx-auto my-8'>
-            <h1 className='text-3xl font-bold text-center'>My Profile</h1>
+            <h1 className='text-3xl font-bold text-center text-white'>My Profile</h1>
             <div className='flex flex-col justify-center items-center my-5'>
                 <div className='bg-base-200 p-6 shadow-sm rounded-2xl w-[600] text-center space-y-4'>
                     <div className="avatar avatar-online">

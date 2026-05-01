@@ -26,9 +26,9 @@ export default function RootLayout({ children }) {
       data-theme="light"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body>
+      <body className="bg-[url(/banner.jpg)] bg-slate-800 bg-blend-overlay bg-no-repeat bg-cover">
         <ToastContainer />
-        <Navbar></Navbar>
+        <div><Navbar></Navbar></div>
         <main>{children}</main>
         <Footer></Footer>
       </body>

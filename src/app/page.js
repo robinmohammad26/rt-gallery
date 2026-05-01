@@ -12,7 +12,7 @@ export default async function Home() {
       <div className="container mx-auto my-8">
         <Banner></Banner>
         <div>
-          <h1 className="text-3xl font-bold mt-5">Featured Tiles</h1>
+          <h1 className="text-3xl font-bold mt-5 text-white">Featured Tiles</h1>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 my-6">
           {

@@ -12,8 +12,8 @@ const TilesDetailsPage = async({params}) => {
 
     return (
         <div className="container mx-auto my-10">
-            <h1 className="text-5xl font-bold my-6">Tiles Details Page</h1>
-            <div className="grid grid-cols-2 gap-2 shadow-md p-6 my-10">
+            <h1 className="text-5xl font-bold my-6 text-white">Tiles Details Page</h1>
+            <div className="grid grid-cols-2 gap-2 shadow-md p-6 my-10 bg-white">
                 <div className=" relative aspect-square p-5">
                     <Image 
                     src={selectedTilesData.image} 

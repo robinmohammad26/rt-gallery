@@ -22,7 +22,7 @@ const AllTilesPage = () => {
         <div className="container mx-auto">
 
             <div className="my-6 flex justify-between">
-                <h2 className="text-3xl font-bold">Our Collections</h2>
+                <h2 className="text-3xl font-bold text-white">Our Collections</h2>
 
                 <SearchTiles
                     featureTiles={featureTiles}

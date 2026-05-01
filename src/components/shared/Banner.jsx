@@ -1,6 +1,7 @@
 import { getFeatureTiles } from "@/fetchData/allData";
 import Link from "next/link";
 import Marquee from "react-fast-marquee";
+import { MdArrowOutward } from "react-icons/md";
 
 
 const Banner = async() => {
@@ -10,13 +11,14 @@ const Banner = async() => {
 
     return (
         <>
-            <div className="hero min-h-[80vh] bg-slate-700 bg-[url(/banner.jpg)] bg-blend-overlay">
+            <div className="hero min-h-[55vh]">
                 <div className="hero-content text-center">
                     <div className="max-w-[778px] space-y-5">
                         <h1 className="text-7xl font-bold text-white">Discover Your Perfect Aesthetic</h1>
-                        <Link href={'/all-tiles'}>
-                            <button className="px-12 py-4 text-2xl rounded-full text-white font-semibold bg-pink-800 hover:bg-pink-600 cursor-pointer">Browse Now</button>
-                        </Link>
+                        <button className="px-12 py-4 text-2xl rounded-full text-white font-semibold bg-pink-800 hover:bg-pink-600 cursor-pointer items-center relative">
+                            <Link href={'/all-tiles'}  >Browse Now</Link>
+                            <span className="bg-amber-400 p-2 rounded-full absolute right-1 top-3"><MdArrowOutward /></span>
+                        </button>
                     </div>
                 </div>
             </div>

@@ -37,7 +37,7 @@ const LoginPage = () => {
 
         return (
             <div className="flex flex-col justify-center min-h-[50vh]">
-                <h2 className="text-3xl font-bold text-center">Login Page</h2>
+                <h2 className="text-3xl font-bold text-center text-white">Login Page</h2>
                 <div className="mt-8 flex justify-center mb-5 w-[500px] mx-auto">
                     <fieldset className="fieldset bg-base-200 border-base-300 rounded-box w-md border p-4">
 

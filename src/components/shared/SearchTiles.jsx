@@ -22,8 +22,8 @@ const SearchTiles = ({ featureTiles, setSearchResults }) => {
     }
 
     return (
-        <div className="join">
-            <form onSubmit={searchTileByTitle}>
+        <form onSubmit={searchTileByTitle}>
+            <div className="join">
                 <div className='flex'>
                     <label className="input validator join-item">
                         <input type="text" name="search" placeholder="Search Here" />
@@ -32,8 +32,8 @@ const SearchTiles = ({ featureTiles, setSearchResults }) => {
                 <button type='submit' className="btn btn-primary join-item">
                     Search
                 </button>
-            </form>
-        </div>
+            </div>
+        </form>
     );
 };
 
