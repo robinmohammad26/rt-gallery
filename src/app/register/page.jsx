@@ -41,7 +41,7 @@ const RegisterPage = () => {
     return (
         <div className="flex flex-col justify-center min-h-[50vh]">
             <h2 className="text-3xl font-bold text-center">Registration Page</h2>
-            <div className="mt-8 flex justify-center mb-5">
+            <div className="mt-8 flex justify-center mb-5 w-[500px] mx-auto">
                 <fieldset className="fieldset bg-base-200 border-base-300 rounded-box w-md border p-4">
 
                     <form className="space-y-3" onSubmit={handleRegisterForm}>
