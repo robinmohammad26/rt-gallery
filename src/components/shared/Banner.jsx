@@ -1,8 +1,13 @@
+import { getFeatureTiles } from "@/fetchData/allData";
 import Link from "next/link";
 import Marquee from "react-fast-marquee";
 
 
-const Banner = () => {
+const Banner = async() => {
+
+    const getTilesName = await getFeatureTiles();
+    console.log(getTilesName)
+
     return (
         <>
             <div className="hero min-h-[80vh] bg-slate-700 bg-[url(/banner.jpg)] bg-blend-overlay">
@@ -16,8 +21,8 @@ const Banner = () => {
                 </div>
             </div>
             <div className="container mx-auto my-10 bg-pink-700 p-10 rounded-md">
-                <Marquee className="text-xl font-semibold text-white">
-                    I can be a React component, multiple React components, or just some text.
+                <Marquee className="text-xl font-semibold text-white mr-5">
+                    <div className="flex gap-6">{getTilesName.map(tiles => <p key={tiles.id}>New Arrivals: {tiles.title} | Weekly Feature: Modern Geometric Patterns | Join the Community...</p>)}</div>
                 </Marquee>
             </div>
         </>

@@ -52,11 +52,15 @@ const Navbar = () => {
                                 />
                             </div>
                         </div><div>
-                                <button onClick={handleLogout} className="px-6 py-2 bg-pink-700 text-white rounded-full hover:bg-pink-600"><Link href={'/'}>Logout</Link></button>
+                            <Link href={'/'}>
+                                <button onClick={handleLogout} className="px-6 py-2 bg-pink-700 text-white rounded-full hover:bg-pink-600">Logout</button>
+                            </Link>
                             </div></> :
 
                             <div>
-                                <button className="px-6 py-2 bg-pink-700 text-white rounded-full hover:bg-pink-600"><Link href={'/login'}>Login</Link></button>
+                                <Link href={'/login'}>
+                                <button className="px-6 py-2 bg-pink-700 text-white rounded-full hover:bg-pink-600">Login</button>
+                                </Link>
                             </div>
                     }
 
