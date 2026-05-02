@@ -48,9 +48,6 @@ const MyProfilePage = () => {
                                     <Modal.Dialog className="sm:max-w-md">
                                         <Modal.CloseTrigger />
                                         <Modal.Header>
-                                            <Modal.Icon className="bg-accent-soft text-accent-soft-foreground">
-                                                <BiEnvelope className="size-5" />
-                                            </Modal.Icon>
                                             <Modal.Heading>Update User</Modal.Heading>
                                         </Modal.Header>
                                         <Modal.Body className="p-6">
