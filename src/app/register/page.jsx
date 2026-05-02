@@ -46,16 +46,19 @@ const RegisterPage = () => {
 
                     <form className="space-y-3" onSubmit={handleRegisterForm}>
                         <label className="label">Name</label>
-                        <input type="text" className="input w-full" name="name" placeholder="Enter Your Name" />
+                        <input type="text" className="input w-full validator" name="name" placeholder="Enter Your Name" required />
+                        <p className="validator-hint hidden">Please Enter Your Name</p>
 
                         <label className="label">Email</label>
-                        <input type="email" className="input w-full" name="email" placeholder="Enter Your Email" />
+                        <input type="email" className="input w-full validator" name="email" placeholder="Enter Your Email" required />
+                        <p className="validator-hint hidden">Please Enter Valid Email</p>
 
                         <label className="label">Photo</label>
                         <input type="photo" className="input w-full" name="image" placeholder="Enter Photo URL" />
 
                         <label className="label">Password</label>
-                        <input type="password" className="input w-full" name="password" placeholder="Enter Your Password" />
+                        <input type="password" className="input w-full validator" name="password" placeholder="Enter Your Password" required />
+                        <p className="validator-hint hidden">Please Enter Valid Password</p>
 
                         <button className="btn bg-pink-800 hover:bg-pink-500 text-white rounded-full mt-4 w-full">Register</button>
                     </form>
