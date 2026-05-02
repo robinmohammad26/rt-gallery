@@ -31,9 +31,6 @@ const LoginPage = () => {
             provider: "google",
         });
 
-       if (data) {
-            toast.success(`${data.user.name} Login Successfully`)
-        }
     }
 
 
@@ -58,7 +55,7 @@ const LoginPage = () => {
                         <div className="my-2 space-y-2">
                             <p className="text-center font-semibold text-sm">Don&apos;t have a account? <span className="text-pink-700 font-semibold cursor-pointer"><Link href={'/register'}>Register</Link></span></p>
                             <p className="text-center font-semibold text-sm">or</p>
-                            <p><button onClick={handleGoogleLogin} className="btn bg-purple-600 hover:bg-purple-500 p-4 text-white w-full rounded-full"><FaGoogle /> Continue with Google</button></p>
+                            <p><button type="button" onClick={handleGoogleLogin} className="btn bg-purple-600 hover:bg-purple-500 p-4 text-white w-full rounded-full"><FaGoogle /> Continue with Google</button></p>
                         </div>
                     </form>
 

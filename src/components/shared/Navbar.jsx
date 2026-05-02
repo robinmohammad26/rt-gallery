@@ -61,10 +61,10 @@ const Navbar = () => {
 
                             <div className="flex gap-2">
                                 <Link href={'/login'}>
-                                <button className="px-6 py-2 bg-pink-700 text-white rounded-full hover:bg-pink-600">Login</button>
+                                <button className="px-6 py-2 bg-pink-700 text-white rounded-full hover:bg-pink-600 cursor-pointer">Login</button>
                                 </Link>
                                 <Link href={'/register'}>
-                                <button className="px-6 py-2 bg-pink-700 text-white rounded-full hover:bg-pink-600">Register</button>
+                                <button className="px-6 py-2 bg-pink-700 text-white rounded-full hover:bg-pink-600 cursor-pointer">Register</button>
                                 </Link>
                             </div>
                     }
