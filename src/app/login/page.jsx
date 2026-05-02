@@ -23,6 +23,10 @@ const LoginPage = () => {
         if (error) {
             toast.warning('Wrong User Or Password!')
         }
+
+        else if(data){
+            toast.success(`${data.user?.name} Registration Successfully`)
+        }
     }
 
 
