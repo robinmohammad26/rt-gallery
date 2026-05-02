@@ -14,7 +14,7 @@ const Banner = async() => {
             <div className="hero min-h-[55vh]">
                 <div className="hero-content text-center">
                     <div className="max-w-[778px] space-y-5">
-                        <h1 className="text-7xl font-bold text-white">Discover Your Perfect Aesthetic</h1>
+                        <h1 className="text-7xl font-bold text-white animate__animated animate__backInLeft">Discover Your Perfect Aesthetic</h1>
                         <button className="px-12 py-4 text-2xl rounded-full text-white font-semibold bg-pink-800 hover:bg-pink-600 cursor-pointer items-center relative">
                             <Link href={'/all-tiles'}  >Browse Now</Link>
                             <span className="bg-amber-400 p-2 rounded-full absolute right-1 top-3"><MdArrowOutward /></span>

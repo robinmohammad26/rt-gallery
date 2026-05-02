@@ -9,7 +9,7 @@ export default async function Home() {
 
   return (
     <>
-      <div className="container mx-auto my-8">
+      <div className="container mx-auto my-8 p-4">
         <Banner></Banner>
         <div>
           <h1 className="text-3xl font-bold mt-5 text-white">Featured Tiles</h1>
