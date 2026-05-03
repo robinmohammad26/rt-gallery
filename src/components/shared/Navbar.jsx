@@ -13,6 +13,7 @@ const Navbar = () => {
         await authClient.signOut();
     }
 
+
     const navLinks = <>
         <li><Link href={'/'}>Home</Link></li>
         <li><Link href={'/all-tiles'}>All Tiles</Link></li>

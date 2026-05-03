@@ -7,7 +7,6 @@ import { MdArrowOutward } from "react-icons/md";
 const Banner = async() => {
 
     const getTilesName = await getFeatureTiles();
-    console.log(getTilesName)
 
     return (
         <>
